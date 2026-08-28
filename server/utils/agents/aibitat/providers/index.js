@@ -25,6 +25,7 @@ const PPIOProvider = require("./ppio.js");
 const GeminiProvider = require("./gemini.js");
 const MoonshotAiProvider = require("./moonshotAi.js");
 const CometApiProvider = require("./cometapi.js");
+const AimlapiProvider = require("./aimlapi.js");
 const FoundryProvider = require("./foundry.js");
 const GiteeAIProvider = require("./giteeai.js");
 const CohereProvider = require("./cohere.js");
@@ -60,6 +61,7 @@ module.exports = {
   ZAIProvider,
   NovitaProvider,
   CometApiProvider,
+  AimlapiProvider,
   NvidiaNimProvider,
   PPIOProvider,
   GeminiProvider,

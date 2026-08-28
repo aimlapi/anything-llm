@@ -900,6 +900,20 @@ const KEY_MAPPING = {
     checks: [],
   },
 
+  // AI/ML API Options
+  AimlapiLLMApiKey: {
+    envKey: "AIMLAPI_LLM_API_KEY",
+    checks: [isNotEmpty],
+  },
+  AimlapiLLMModelPref: {
+    envKey: "AIMLAPI_LLM_MODEL_PREF",
+    checks: [isNotEmpty],
+  },
+  AimlapiLLMTimeout: {
+    envKey: "AIMLAPI_LLM_TIMEOUT_MS",
+    checks: [],
+  },
+
   // Z.AI Options
   ZAiApiKey: {
     envKey: "ZAI_API_KEY",
@@ -1128,6 +1142,7 @@ function supportedLLM(input = "") {
     "ppio",
     "moonshotai",
     "cometapi",
+    "aimlapi",
     "foundry",
     "zai",
     "giteeai",
