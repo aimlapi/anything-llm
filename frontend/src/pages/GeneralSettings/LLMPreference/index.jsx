@@ -10,6 +10,7 @@ import GenericOpenAiLogo from "@/media/llmprovider/generic-openai.png";
 import AzureOpenAiLogo from "@/media/llmprovider/azure.png";
 import AnthropicLogo from "@/media/llmprovider/anthropic.png";
 import GeminiLogo from "@/media/llmprovider/gemini.png";
+import AimlapiLogo from "@/media/llmprovider/aimlapi.png";
 import OllamaLogo from "@/media/llmprovider/ollama.png";
 import NovitaLogo from "@/media/llmprovider/novita.png";
 import LMStudioLogo from "@/media/llmprovider/lmstudio.png";
@@ -55,6 +56,7 @@ import GeminiLLMOptions from "@/components/LLMSelection/GeminiLLMOptions";
 import OllamaLLMOptions from "@/components/LLMSelection/OllamaLLMOptions";
 import NovitaLLMOptions from "@/components/LLMSelection/NovitaLLMOptions";
 import CometApiLLMOptions from "@/components/LLMSelection/CometApiLLMOptions";
+import AimlapiLLMOptions from "@/components/LLMSelection/AimlapiLLMOptions";
 import TogetherAiOptions from "@/components/LLMSelection/TogetherAiOptions";
 import FireworksAiOptions from "@/components/LLMSelection/FireworksAiOptions";
 import MistralOptions from "@/components/LLMSelection/MistralOptions";
@@ -133,6 +135,14 @@ export const AVAILABLE_LLM_PROVIDERS = [
     options: (settings) => <GeminiLLMOptions settings={settings} />,
     description: "Google's largest and most capable AI model",
     requiredConfig: ["GeminiLLMApiKey"],
+  },
+  {
+    name: "AI/ML API",
+    value: "aimlapi",
+    logo: AimlapiLogo,
+    options: (settings) => <AimlapiLLMOptions settings={settings} />,
+    description: "One API key, 1,000+ AI models from every major provider.",
+    requiredConfig: ["AimlapiLLMApiKey"],
   },
   {
     name: "NVIDIA NIM",

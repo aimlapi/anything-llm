@@ -219,6 +219,9 @@ function getLLMProvider({ provider = null, model = null } = {}) {
     case "cometapi":
       const { CometApiLLM } = require("../AiProviders/cometapi");
       return new CometApiLLM(embedder, model);
+    case "aimlapi":
+      const { AimlapiLLM } = require("../AiProviders/aimlapi");
+      return new AimlapiLLM(embedder, model);
     case "foundry":
       const { FoundryLLM } = require("../AiProviders/foundry");
       return new FoundryLLM(embedder, model);
@@ -443,6 +446,9 @@ function getLLMProviderClass({ provider = null } = {}) {
     case "cometapi":
       const { CometApiLLM } = require("../AiProviders/cometapi");
       return CometApiLLM;
+    case "aimlapi":
+      const { AimlapiLLM } = require("../AiProviders/aimlapi");
+      return AimlapiLLM;
     case "foundry":
       const { FoundryLLM } = require("../AiProviders/foundry");
       return FoundryLLM;
@@ -544,6 +550,8 @@ function getBaseLLMProviderModel({ provider = null } = {}) {
       return process.env.MOONSHOT_AI_MODEL_PREF;
     case "cometapi":
       return process.env.COMETAPI_LLM_MODEL_PREF;
+    case "aimlapi":
+      return process.env.AIMLAPI_LLM_MODEL_PREF;
     case "foundry":
       return process.env.FOUNDRY_MODEL_PREF;
     case "zai":

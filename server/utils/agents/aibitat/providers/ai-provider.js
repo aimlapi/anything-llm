@@ -387,6 +387,21 @@ class Provider {
           apiKey: process.env.COMETAPI_LLM_API_KEY ?? null,
           ...config,
         });
+      case "aimlapi":
+        return new ChatOpenAI({
+          configuration: {
+            baseURL: "https://api.aimlapi.com/v1",
+            defaultHeaders: {
+              "HTTP-Referer": "https://anythingllm.com",
+              "X-AIMLAPI-Source": "agent/anything-llm",
+              "X-AIMLAPI-Partner-ID":
+                process.env.AIMLAPI_PARTNER_ID ||
+                "part_FXcAox42TxtQLw5v01wK3fmy",
+            },
+          },
+          apiKey: process.env.AIMLAPI_LLM_API_KEY ?? null,
+          ...config,
+        });
       case "giteeai":
         return new ChatOpenAI({
           configuration: {

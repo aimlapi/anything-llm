@@ -1492,6 +1492,8 @@ https://docs.anythingllm.com/agent/intelligent-tool-selection
         return new Providers.GeminiProvider({ model: config.model });
       case "cometapi":
         return new Providers.CometApiProvider({ model: config.model });
+      case "aimlapi":
+        return new Providers.AimlapiProvider({ model: config.model });
       case "foundry":
         return new Providers.FoundryProvider({ model: config.model });
       case "giteeai":

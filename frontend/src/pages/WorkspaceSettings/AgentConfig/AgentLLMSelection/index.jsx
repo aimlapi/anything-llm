@@ -31,6 +31,7 @@ const ENABLED_PROVIDERS = [
   "xai",
   "nvidia-nim",
   "gemini",
+  "aimlapi",
   "moonshotai",
   "cometapi",
   "foundry",

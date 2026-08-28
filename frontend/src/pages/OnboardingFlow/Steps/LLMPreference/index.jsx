@@ -5,6 +5,7 @@ import GenericOpenAiLogo from "@/media/llmprovider/generic-openai.png";
 import AzureOpenAiLogo from "@/media/llmprovider/azure.png";
 import AnthropicLogo from "@/media/llmprovider/anthropic.png";
 import GeminiLogo from "@/media/llmprovider/gemini.png";
+import AimlapiLogo from "@/media/llmprovider/aimlapi.png";
 import OllamaLogo from "@/media/llmprovider/ollama.png";
 import LMStudioLogo from "@/media/llmprovider/lmstudio.png";
 import LocalAiLogo from "@/media/llmprovider/localai.png";
@@ -65,6 +66,7 @@ import NvidiaNimOptions from "@/components/LLMSelection/NvidiaNimOptions";
 import PPIOLLMOptions from "@/components/LLMSelection/PPIOLLMOptions";
 import MoonshotAiOptions from "@/components/LLMSelection/MoonshotAiOptions";
 import CometApiLLMOptions from "@/components/LLMSelection/CometApiLLMOptions";
+import AimlapiLLMOptions from "@/components/LLMSelection/AimlapiLLMOptions";
 import GiteeAiOptions from "@/components/LLMSelection/GiteeAIOptions";
 import DockerModelRunnerOptions from "@/components/LLMSelection/DockerModelRunnerOptions";
 import PrivateModeOptions from "@/components/LLMSelection/PrivateModeOptions";
@@ -109,6 +111,13 @@ const LLMS = [
     logo: GeminiLogo,
     options: (settings) => <GeminiLLMOptions settings={settings} />,
     description: "Google's largest and most capable AI model",
+  },
+  {
+    name: "AI/ML API",
+    value: "aimlapi",
+    logo: AimlapiLogo,
+    options: (settings) => <AimlapiLLMOptions settings={settings} />,
+    description: "One API key, 1,000+ AI models from every major provider.",
   },
   {
     name: "NVIDIA NIM",
