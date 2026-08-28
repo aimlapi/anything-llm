@@ -32,13 +32,12 @@ class AimlapiLLM {
       defaultHeaders: {
         "HTTP-Referer": "https://anythingllm.com",
         "X-AIMLAPI-Source": "agent/anything-llm",
-        "X-AIMLAPI-Partner-ID": process.env.AIMLAPI_PARTNER_ID || "part_FXcAox42TxtQLw5v01wK3fmy",
+        "X-AIMLAPI-Partner-ID":
+          process.env.AIMLAPI_PARTNER_ID || "part_FXcAox42TxtQLw5v01wK3fmy",
       },
     });
     this.model =
-      modelPreference ||
-      process.env.AIMLAPI_LLM_MODEL_PREF ||
-      "openai/gpt-5-5";
+      modelPreference || process.env.AIMLAPI_LLM_MODEL_PREF || "openai/gpt-5-5";
     this.limits = {
       history: this.promptWindowLimit() * 0.15,
       system: this.promptWindowLimit() * 0.15,

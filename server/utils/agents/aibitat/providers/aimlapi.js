@@ -21,7 +21,8 @@ class AimlapiProvider extends InheritMultiple([Provider, UnTooled]) {
       defaultHeaders: {
         "HTTP-Referer": "https://anythingllm.com",
         "X-AIMLAPI-Source": "agent/anything-llm",
-        "X-AIMLAPI-Partner-ID": process.env.AIMLAPI_PARTNER_ID || "part_FXcAox42TxtQLw5v01wK3fmy",
+        "X-AIMLAPI-Partner-ID":
+          process.env.AIMLAPI_PARTNER_ID || "part_FXcAox42TxtQLw5v01wK3fmy",
       },
     });
 
