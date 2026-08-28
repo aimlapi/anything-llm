@@ -332,7 +332,7 @@ class AimlapiLLM {
             });
           }
 
-          if (message.finish_reason !== null) {
+          if (message?.finish_reason != null) {
             writeResponseChunk(response, {
               uuid,
               sources,
